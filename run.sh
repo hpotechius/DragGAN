@@ -1,6 +1,8 @@
 #!/bin/bash
 
-# filepath: /home/potechius/Code/anycost-gan/setup_and_run.sh
+export CUDA_HOME=/cluster/nvidia/cuda/12.1.0
+export PATH=$CUDA_HOME/bin:$PATH
+export LD_LIBRARY_PATH=$CUDA_HOME/lib64:$LD_LIBRARY_PATH
 
 # Überprüfen, ob die virtuelle Umgebung bereits existiert
 if [ ! -d "env" ]; then
