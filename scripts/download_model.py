@@ -17,6 +17,8 @@ def download_file(url: str, filename: str, download_dir: str):
             return
         if os.path.isfile(filepath) and os.path.getsize(filepath) != content_length:
             print(f"{filepath} already exists but size does not match. Redownloading.")
+            print("SKIP")
+            return
         else:
             print(f"Downloading {filename} from {url}")
 
