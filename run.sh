@@ -5,7 +5,9 @@
 # Überprüfen, ob die virtuelle Umgebung bereits existiert
 if [ ! -d "env" ]; then
     echo "Virtuelle Umgebung wird erstellt..."
-    python3.8 -m venv env
+    module load tools/python/3.8
+    python3 -m venv env
+    #python3.8 -m venv env
     echo "Virtuelle Umgebung wurde erstellt."
 else
     echo "Virtuelle Umgebung existiert bereits."
